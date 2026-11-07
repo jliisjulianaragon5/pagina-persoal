@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snoopy Facts | Datos curiosos de Snoopy</title>
+    <meta
+      name="description"
+      content="Descubre datos curiosos, historias y detalles fascinantes sobre Snoopy y el mundo de Peanuts."
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --bg: #020202;
+        --bg-soft: #111111;
+        --card: rgba(20, 20, 20, 0.9);
+        --primary: #f3d52c;
+        --primary-dark: #f0d11d;
+        --secondary: #ff4d68;
+        --secondary-soft: #ffd1d8;
+        --accent: #f9f9f9;
+        --accent-2: #f0d11d;
+        --text: #f5f5f5;
+        --muted: #d7d7d7;
+        --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(243, 213, 44, 0.08), transparent 20%),
+          radial-gradient(circle at 80% 20%, rgba(255, 77, 104, 0.08), transparent 18%),
+          var(--bg);
+        color: var(--text);
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1180px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(12px);
+        background: rgba(6, 6, 6, 0.72);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-family: "Baloo 2", cursive;
+        font-size: 1.8rem;
+        color: var(--text);
+        font-weight: 800;
+      }
+
+      .brand-mark {
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #f9e66a, #f0d11d);
+        display: grid;
+        place-items: center;
+        box-shadow: var(--shadow);
+        font-size: 1.5rem;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        font-weight: 700;
+        color: var(--text);
+        opacity: 0.9;
+        transition: opacity 0.2s ease;
+      }
+
+      .nav-links a:hover {
+        opacity: 1;
+      }
+
+      .nav-links .button-link {
+        background: var(--primary);
+        color: #111111;
+        padding: 0.78rem 1.2rem;
+        border-radius: 999px;
+        box-shadow: 0 10px 20px rgba(243, 213, 44, 0.2);
+      }
+
+      .hero {
+        padding: 5rem 0 4rem;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(243, 213, 44, 0.12);
+        color: var(--primary);
+        border: 1px solid rgba(243, 213, 44, 0.25);
+        padding: 0.5rem 0.9rem;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      h1 {
+        font-family: "Baloo 2", cursive;
+        font-size: clamp(2.8rem, 5vw, 5.2rem);
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+        margin: 1.2rem 0 1rem;
+        color: var(--text);
+      }
+
+      .accent {
+        color: var(--primary);
+      }
+
+      .lead {
+        font-size: 1.08rem;
+        color: var(--muted);
+        max-width: 56ch;
+        line-height: 1.7;
+      }
+
+      .cta-row {
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .button,
+      button {
+        border: none;
+        cursor: pointer;
+        transition: transform 0.22s ease, box-shadow 0.22s ease;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.65rem;
+        border-radius: 999px;
+        padding: 1rem 1.5rem;
+        font-weight: 800;
+        font-size: 0.98rem;
+      }
+
+      .button:hover,
+      button:hover {
+        transform: translateY(-2px);
+      }
+
+      .button.primary {
+        background: linear-gradient(135deg, #f3d52c, #f5d640);
+        color: #111111;
+        box-shadow: 0 16px 28px rgba(243, 213, 44, 0.18);
+      }
+
+      .button.secondary {
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .stats {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .stat {
+        background: rgba(18, 18, 18, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        padding: 1rem 1.1rem;
+        box-shadow: var(--shadow);
+      }
+
+      .stat strong {
+        display: block;
+        font-family: "Baloo 2", cursive;
+        color: var(--primary);
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+
+      .art-panel {
+        position: relative;
+        display: grid;
+        place-items: center;
+        min-height: 500px;
+      }
+
+      .art-card {
+        position: relative;
+        width: min(100%, 500px);
+        aspect-ratio: 1 / 1.12;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        overflow: visible;
+      }
+
+      .art-card::before {
+        content: "";
+        position: absolute;
+        inset: 10% 6% 2% 6%;
+        border-radius: 32px;
+        background: radial-gradient(circle at center, rgba(243, 213, 44, 0.08), transparent 58%);
+        pointer-events: none;
+      }
+
+      .cloud {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .cloud.one {
+        width: 120px;
+        height: 44px;
+        top: 38px;
+        right: 30px;
+      }
+
+      .cloud.two {
+        width: 180px;
+        height: 58px;
+        top: 68px;
+        left: 20px;
+      }
+
+      .cloud::before,
+      .cloud::after {
+        content: "";
+        position: absolute;
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 999px;
+      }
+
+      .cloud::before {
+        width: 52px;
+        height: 52px;
+        left: 18px;
+        top: -18px;
+      }
+
+      .cloud::after {
+        width: 60px;
+        height: 60px;
+        right: 18px;
+        top: -22px;
+      }
+
+      .dog-face {
+        position: absolute;
+        width: 330px;
+        height: 260px;
+        left: 50%;
+        bottom: 120px;
+        transform: translateX(-50%);
+        background: linear-gradient(180deg, #f7e044, #f0d11d);
+        border: 6px solid #0f0f0f;
+        border-radius: 48% 44% 52% 48% / 58% 54% 46% 42%;
+        box-shadow: inset 0 -16px 0 rgba(0, 0, 0, 0.03);
+      }
+
+      .dog-body {
+        position: absolute;
+        width: 220px;
+        height: 180px;
+        left: 50%;
+        bottom: 12px;
+        transform: translateX(-50%);
+        background: linear-gradient(180deg, #fbe65f, #edcf0c);
+        border: 6px solid #0f0f0f;
+        border-radius: 46% 46% 42% 42% / 54% 54% 40% 40%;
+      }
+
+      .dog-paw {
+        position: absolute;
+        width: 36px;
+        height: 58px;
+        background: #f3d52c;
+        border: 6px solid #0f0f0f;
+        border-radius: 18px;
+        bottom: 6px;
+      }
+
+      .dog-paw.left { left: 155px; }
+      .dog-paw.right { right: 155px; }
+
+      .dog-tail {
+        position: absolute;
+        width: 16px;
+        height: 92px;
+        background: #f3d52c;
+        border: 6px solid #0f0f0f;
+        border-radius: 10px;
+        right: 65px;
+        bottom: 86px;
+        transform: rotate(30deg);
+      }
+
+      .dog-ear {
+        position: absolute;
+        width: 82px;
+        height: 118px;
+        background: linear-gradient(180deg, #f6dc25, #f0d11d);
+        border: 6px solid #0b0b0b;
+        border-radius: 64% 64% 52% 52%;
+        top: -60px;
+      }
+
+      .dog-ear.left { left: 38px; transform: rotate(-18deg); }
+      .dog-ear.right { right: 38px; transform: rotate(18deg); }
+
+      .dog-eye {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background: #111111;
+        border-radius: 50%;
+        top: 108px;
+      }
+
+      .dog-eye.left { left: 86px; }
+      .dog-eye.right { right: 86px; }
+
+      .dog-nose {
+        position: absolute;
+        width: 28px;
+        height: 22px;
+        background: #d32f46;
+        border-radius: 46% 46% 58% 58%;
+        left: 50%;
+        top: 136px;
+        transform: translateX(-50%);
+      }
+
+      .dog-mouth {
+        position: absolute;
+        width: 120px;
+        height: 82px;
+        left: 50%;
+        top: 148px;
+        transform: translateX(-50%);
+        border-bottom: 6px solid #111111;
+        border-radius: 0 0 90px 90px;
+      }
+
+      .dog-collar {
+        position: absolute;
+        width: 170px;
+        height: 40px;
+        background: linear-gradient(90deg, #ff4d68, #ff7989);
+        border-radius: 999px;
+        left: 50%;
+        bottom: 18px;
+        transform: translateX(-50%);
+        border: 4px solid rgba(255,255,255,0.55);
+      }
+
+      .dog-tag {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background: #f5d64a;
+        border-radius: 50%;
+        left: 50%;
+        bottom: 16px;
+        transform: translateX(-50%);
+        border: 2px solid rgba(17,17,17,0.2);
+      }
+
+      .heart {
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        background: #ff3b57;
+        transform: rotate(-45deg);
+        border-radius: 12px 12px 0 0;
+        box-shadow: 0 0 18px rgba(255, 59, 87, 0.35);
+      }
+
+      .heart::before,
+      .heart::after {
+        content: "";
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        background: #ff3b57;
+        border-radius: 50%;
+      }
+
+      .heart::before {
+        top: -21px;
+        left: 0;
+      }
+
+      .heart::after {
+        left: 21px;
+        top: 0;
+      }
+
+      .heart.one {
+        right: 34px;
+        top: 150px;
+      }
+
+      .heart.two {
+        right: 58px;
+        top: 230px;
+      }
+
+      .bubble {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 22px;
+        padding: 0.75rem 1rem;
+        font-weight: 700;
+        color: var(--text);
+        box-shadow: 0 12px 18px rgba(18, 33, 61, 0.08);
+      }
+
+      .bubble.one {
+        top: 94px;
+        left: 14px;
+        transform: rotate(-5deg);
+      }
+
+      .bubble.two {
+        right: 20px;
+        bottom: 120px;
+        transform: rotate(6deg);
+      }
+
+      main {
+        padding-bottom: 4rem;
+      }
+
+      .section {
+        padding: 2rem 0;
+      }
+
+      .section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-heading h2 {
+        margin: 0;
+        font-family: "Baloo 2", cursive;
+        color: var(--primary-dark);
+        font-size: clamp(2.1rem, 4vw, 3.2rem);
+        letter-spacing: -0.03em;
+      }
+
+      .button.small {
+        padding: 0.75rem 1.15rem;
+        font-size: 0.88rem;
+        background: rgba(255, 255, 255, 0.75);
+        color: var(--primary-dark);
+        border: 1px solid rgba(30, 58, 95, 0.08);
+      }
+
+      .toolbar {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin: 1.25rem 0 1.7rem;
+        flex-wrap: wrap;
+      }
+
+      .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+      }
+
+      .filter-chip {
+        background: rgba(255,255,255,0.75);
+        color: var(--primary);
+        border: 1px solid rgba(30, 58, 95, 0.08);
+        border-radius: 999px;
+        padding: 0.7rem 1rem;
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+
+      .filter-chip.active {
+        background: linear-gradient(135deg, var(--primary), #2c5b8d);
+        color: white;
+        box-shadow: 0 12px 20px rgba(30, 58, 95, 0.18);
+      }
+
+      .search-box {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        background: rgba(255,255,255,0.7);
+        border: 1px solid rgba(30,58,95,0.08);
+        border-radius: 999px;
+        padding: 0.65rem 0.9rem;
+        color: var(--muted);
+      }
+
+      .search-box input {
+        border: none;
+        background: transparent;
+        outline: none;
+        font: inherit;
+        width: min(280px, 50vw);
+        color: var(--text);
+      }
+
+      .facts-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.3rem;
+      }
+
+      .fact-card {
+        background: rgba(18,18,18,0.9);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 26px;
+        padding: 1.2rem;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .fact-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .fact-tag {
+        border-radius: 999px;
+        padding: 0.45rem 0.75rem;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .tag-historia { background: rgba(255, 183, 3, 0.18); color: #8d6406; }
+      .tag-personajes { background: rgba(133, 199, 255, 0.2); color: #1d4f7f; }
+      .tag-cultura { background: rgba(197, 240, 189, 0.34); color: #2d5a35; }
+      .tag-comic { background: rgba(227, 93, 123, 0.14); color: #8a3147; }
+
+      .favorite-btn {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.8);
+        border: 1px solid rgba(30,58,95,0.08);
+        color: #d3708f;
+        font-size: 1.2rem;
+      }
+
+      .fact-card h3 {
+        margin: 0;
+        font-size: 1.35rem;
+        color: var(--text);
+        font-weight: 800;
+      }
+
+      .fact-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .fact-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.7rem;
+        margin-top: auto;
+      }
+
+      .fact-meta span {
+        font-size: 0.8rem;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      .fact-card .read-more {
+        background: rgba(243, 213, 44, 0.08);
+        border: 1px solid rgba(243, 213, 44, 0.2);
+        color: var(--primary);
+        padding: 0.65rem 0.9rem;
+        border-radius: 999px;
+        font-weight: 700;
+      }
+
+      .highlight-panel {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 1.2rem;
+        margin-top: 2rem;
+      }
+
+      .feature-card,
+      .mini-quiz,
+      .favorites {
+        background: rgba(18,18,18,0.9);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 28px;
+        padding: 1.4rem;
+        box-shadow: var(--shadow);
+      }
+
+      .feature-card {
+        background: linear-gradient(135deg, rgba(243, 213, 44, 0.12), rgba(255, 255, 255, 0.02));
+      }
+
+      .feature-card h3,
+      .mini-quiz h3,
+      .favorites h3 {
+        margin-top: 0;
+        margin-bottom: 0.7rem;
+        font-family: "Baloo 2", cursive;
+        font-size: clamp(1.8rem, 3vw, 2.4rem);
+        color: var(--text);
+      }
+
+      .feature-card p,
+      .mini-quiz p,
+      .favorites p {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .fact-quote {
+        display: grid;
+        gap: 0.8rem;
+        margin-top: 1rem;
+      }
+
+      .fact-quote strong {
+        display: block;
+        font-size: 1.2rem;
+        color: var(--primary-dark);
+      }
+
+      .fact-quote em {
+        color: #a85d78;
+      }
+
+      .quiz-box {
+        margin-top: 1.1rem;
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .quiz-box button {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 16px;
+        padding: 0.9rem 1rem;
+        text-align: left;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .quiz-box button.correct {
+        background: rgba(197, 240, 189, 0.8);
+        border-color: rgba(60, 122, 75, 0.18);
+      }
+
+      .quiz-box button.wrong {
+        background: rgba(255, 200, 200, 0.7);
+        border-color: rgba(190, 85, 85, 0.18);
+      }
+
+      .score {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(243, 213, 44, 0.1);
+        color: var(--primary);
+        padding: 0.45rem 0.8rem;
+        border-radius: 999px;
+        font-weight: 700;
+      }
+
+      .favorites-list {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0 0;
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .favorites-list li {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 16px;
+        padding: 0.8rem 0.9rem;
+      }
+
+      .favorites-list span {
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .favorites-list button {
+        background: transparent;
+        border: none;
+        color: #d06d7d;
+        font-size: 1.1rem;
+      }
+
+      .empty-state {
+        color: var(--muted);
+        font-style: italic;
+      }
+
+      footer {
+        padding: 2.2rem 0 4rem;
+      }
+
+      .footer-card {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+        background: linear-gradient(135deg, rgba(243, 213, 44, 0.08), rgba(255, 255, 255, 0.02));
+        color: var(--text);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 28px;
+        padding: 1.3rem 1.4rem;
+        box-shadow: var(--shadow);
+      }
+
+      .footer-card p {
+        margin: 0;
+        opacity: 0.94;
+        font-weight: 600;
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid,
+        .highlight-panel,
+        .facts-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .search-box input {
+          width: 190px;
+        }
+
+        .section-heading,
+        .toolbar,
+        .footer-card {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .stats {
+          grid-template-columns: 1fr;
+        }
+
+        .cta-row {
+          flex-direction: column;
+        }
+
+        .button,
+        .nav-links .button-link {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a href="#top" class="brand" aria-label="Inicio Snoopy Facts">
+          <span class="brand-mark">🐶</span>
+          Snoopy Facts
+        </a>
+
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="#curiosidades">Curiosidades</a>
+          <a href="#quiz">Quiz</a>
+          <a href="#favoritos">Favoritos</a>
+          <a href="#top" class="button-link">Explora ahora</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="eyebrow">✨ Mundo de Peanuts</span>
+            <h1>
+              Datos curiosos que hacen a <span class="accent">Snoopy</span>
+              aún más inolvidable
+            </h1>
+            <p class="lead">
+              Descubre anécdotas, detalles y secretos del personaje más querido del cómic
+              estadounidense. Un sitio hecho para fans que quieren vivir cada rincón de su
+              universo favorito.
+            </p>
+
+            <div class="cta-row">
+              <a href="#curiosidades" class="button primary">Ver curiosidades</a>
+              <a href="#quiz" class="button secondary">Jugar un mini quiz</a>
+            </div>
+
+            <div class="stats" aria-label="Estadísticas del personaje">
+              <div class="stat">
+                <strong>1950</strong>
+                <span>Año de debut</span>
+              </div>
+              <div class="stat">
+                <strong>1</strong>
+                <span>Icono eterno</span>
+              </div>
+              <div class="stat">
+                <strong>∞</strong>
+                <span>Fanáticos encantados</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="art-panel" aria-label="Ilustración de Snoopy">
+            <div class="art-card">
+              <div class="cloud one"></div>
+              <div class="cloud two"></div>
+              <div class="bubble one">¡Mmm! Fantástico</div>
+              <div class="bubble two">¡Avolar! ✈️</div>
+              <div class="heart one" aria-hidden="true"></div>
+              <div class="heart two" aria-hidden="true"></div>
+
+              <div class="dog-tail" aria-hidden="true"></div>
+              <div class="dog-body" aria-hidden="true"></div>
+              <div class="dog-paw left" aria-hidden="true"></div>
+              <div class="dog-paw right" aria-hidden="true"></div>
+
+              <div class="dog-face" aria-hidden="true">
+                <div class="dog-ear left"></div>
+                <div class="dog-ear right"></div>
+                <div class="dog-eye left"></div>
+                <div class="dog-eye right"></div>
+                <div class="dog-nose"></div>
+                <div class="dog-mouth"></div>
+                <div class="dog-collar"></div>
+                <div class="dog-tag"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="curiosidades">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Curiosidades para fans</h2>
+            <button class="button small" id="randomFactBtn">Dato aleatorio</button>
+          </div>
+
+          <div class="toolbar">
+            <div class="filters" id="filters" aria-label="Filtros de curiosidades"></div>
+            <label class="search-box" aria-label="Buscar curiosidades">
+              <span>🔎</span>
+              <input id="searchInput" type="search" placeholder="Buscar por tema o palabra" />
+            </label>
+          </div>
+
+          <div class="facts-grid" id="factsGrid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="quiz">
+        <div class="container highlight-panel">
+          <article class="feature-card">
+            <h3>¿Sabías esto?</h3>
+            <p>
+              A pesar de ser un perro muy simple en apariencia, Snoopy tiene una personalidad
+              enorme: es imaginativo, creativo, competitivo y profundamente humano en su forma de
+              interpretar la vida cotidiana.
+            </p>
+
+            <div class="fact-quote">
+              <strong>“Snoopy no es solo un perro: es una pequeña obra de arte de la imaginación.”</strong>
+              <em>— Para todos los fans de Peanuts</em>
+            </div>
+          </article>
+
+          <aside class="mini-quiz" aria-live="polite">
+            <h3>Mini quiz</h3>
+            <p>Selecciona la respuesta correcta sobre Snoopy.</p>
+            <div class="score" id="score">Puntaje: 0</div>
+            <div class="quiz-box" id="quizBox"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="favoritos">
+        <div class="container">
+          <div class="favorites">
+            <h3>Tu colección favorita</h3>
+            <p>Guarda las curiosidades que más te encantan y vuelve a ellas cuando quieras.</p>
+            <ul class="favorites-list" id="favoritesList"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-card">
+        <p>Diseñado para fanáticos de Snoopy y Peanuts.</p>
+        <p>Hecho con cariño, humor y muchos detalles curiosos. 🐾</p>
+      </div>
+    </footer>
+
+    <script>
+      const facts = [
+        {
+          id: 1,
+          title: "El primer gran alter ego de Snoopy",
+          category: "personajes",
+          categoryLabel: "Personajes",
+          text: "Snoopy se convierte en un piloto de guerra imaginario con su identidad de 'Red Baron', una de sus facetas más queridas y reconocidas por los fans.",
+          badge: "La gran fantasía"
+        },
+        {
+          id: 2,
+          title: "Un perro con mucha vida interior",
+          category: "personajes",
+          categoryLabel: "Personajes",
+          text: "Lo más fascinante de Snoopy es que parece vivir en un mundo paralelo: sueña, interpreta historias, se toma la vida con humor y creatividad.",
+          badge: "Imaginación"
+        },
+        {
+          id: 3,
+          title: "Peanuts nació en la década de 1950",
+          category: "historia",
+          categoryLabel: "Historia",
+          text: "La tira cómica creada por Charles M. Schulz debutó en 1950 y rápidamente se convirtió en un fenómeno cultural con millones de lectores.",
+          badge: "1950"
+        },
+        {
+          id: 4,
+          title: "El humor más simple, y el más universal",
+          category: "cultura",
+          categoryLabel: "Cultura",
+          text: "Snoopy representa una mezcla de ternura, caos creativo y observación humana. Es una figura que funciona igual de bien en una viñeta como en una historia emocional.",
+          badge: "Humor eterno"
+        },
+        {
+          id: 5,
+          title: "Charlie Brown y Snoopy, una amistad clásica",
+          category: "comic",
+          categoryLabel: "Cómic",
+          text: "La relación entre Charlie Brown y Snoopy es parte del encanto emocional del cómic: un contraste entre la ansiedad cotidiana y la imaginación libre.",
+          badge: "Amistad"
+        },
+        {
+          id: 6,
+          title: "Snoopy es visualmente minimalista",
+          category: "cultura",
+          categoryLabel: "Cultura",
+          text: "Su diseño es simple pero memorable: una figura minimalista que resalta su expresividad, sus gestos y su enorme personalidad.",
+          badge: "Minimalismo"
+        },
+        {
+          id: 7,
+          title: "Un héroe de la imaginación",
+          category: "personajes",
+          categoryLabel: "Personajes",
+          text: "Cuando Snoopy se imagina como piloto, artista o rey, la historia cambia de tono y se convierte en una pequeña obra de cine en una viñeta.",
+          badge: "Heroísmo"
+        },
+        {
+          id: 8,
+          title: "La tira tuvo una fuerza enorme",
+          category: "historia",
+          categoryLabel: "Historia",
+          text: "Peanuts se convirtió en una referencia cultural de la vida cotidiana: humor, reflexión, amistad y pequeñas tragedias que todos entendemos.",
+          badge: "Legado"
+        }
+      ];
+
+      const filters = [
+        { id: "all", label: "Todo" },
+        { id: "historia", label: "Historia" },
+        { id: "personajes", label: "Personajes" },
+        { id: "cultura", label: "Cultura" },
+        { id: "comic", label: "Cómic" }
+      ];
+
+      const quizData = {
+        question: "¿Cuál es la identidad más famosa de Snoopy cuando imagina aventuras?",
+        options: [
+          { text: "El piloto Red Baron", correct: true },
+          { text: "Un astronauta de Marte", correct: false },
+          { text: "Un chef gourmet", correct: false },
+          { text: "Un detective del futuro", correct: false }
+        ]
+      };
+
+      const favoriteKey = "snoopy-favorites";
+      const state = {
+        filter: "all",
+        search: "",
+        score: 0,
+        answered: false,
+        favorites: JSON.parse(localStorage.getItem(favoriteKey) || "[]")
+      };
+
+      const factsGrid = document.getElementById("factsGrid");
+      const filtersEl = document.getElementById("filters");
+      const searchInput = document.getElementById("searchInput");
+      const randomFactBtn = document.getElementById("randomFactBtn");
+      const quizBox = document.getElementById("quizBox");
+      const scoreEl = document.getElementById("score");
+      const favoritesList = document.getElementById("favoritesList");
+
+      function renderFilters() {
+        filtersEl.innerHTML = filters
+          .map(
+            (filter) => `
+              <button class="filter-chip ${state.filter === filter.id ? "active" : ""}" data-filter="${filter.id}">
+                ${filter.label}
+              </button>
+            `
+          )
+          .join("");
+
+        document.querySelectorAll(".filter-chip").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.filter = button.dataset.filter;
+            renderFilters();
+            renderFacts();
+          });
+        });
+      }
+
+      function renderFacts() {
+        const filtered = facts.filter((fact) => {
+          const matchesCategory = state.filter === "all" || fact.category === state.filter;
+          const query = state.search.toLowerCase();
+          const matchesSearch =
+            !query ||
+            fact.title.toLowerCase().includes(query) ||
+            fact.text.toLowerCase().includes(query) ||
+            fact.categoryLabel.toLowerCase().includes(query);
+
+          return matchesCategory && matchesSearch;
+        });
+
+        factsGrid.innerHTML = filtered
+          .map(
+            (fact) => `
+              <article class="fact-card">
+                <div class="fact-top">
+                  <span class="fact-tag tag-${fact.category}">${fact.categoryLabel}</span>
+                  <button class="favorite-btn" data-id="${fact.id}" aria-label="Agregar a favoritos">
+                    ${state.favorites.includes(fact.id) ? "♥" : "♡"}
+                  </button>
+                </div>
+
+                <h3>${fact.title}</h3>
+                <p>${fact.text}</p>
+
+                <div class="fact-meta">
+                  <span>${fact.badge}</span>
+                  <button class="read-more" type="button">Leer</button>
+                </div>
+              </article>
+            `
+          )
+          .join("") || '<div class="fact-card"><p>No se encontraron curiosidades con ese término.</p></div>';
+
+        document.querySelectorAll(".favorite-btn").forEach((button) => {
+          button.addEventListener("click", () => toggleFavorite(Number(button.dataset.id)));
+        });
+      }
+
+      function toggleFavorite(id) {
+        if (state.favorites.includes(id)) {
+          state.favorites = state.favorites.filter((favId) => favId !== id);
+        } else {
+          state.favorites = [...state.favorites, id];
+        }
+
+        localStorage.setItem(favoriteKey, JSON.stringify(state.favorites));
+        renderFacts();
+        renderFavorites();
+      }
+
+      function renderFavorites() {
+        const favorites = facts.filter((fact) => state.favorites.includes(fact.id));
+
+        if (!favorites.length) {
+          favoritesList.innerHTML = '<li class="empty-state">Aún no tienes favoritos. Haz clic en el corazón de una curiosidad.</li>';
+          return;
+        }
+
+        favoritesList.innerHTML = favorites
+          .map(
+            (fact) => `
+              <li>
+                <span>${fact.title}</span>
+                <button aria-label="Quitar de favoritos" data-remove="${fact.id}">✕</button>
+              </li>
+            `
+          )
+          .join("");
+
+        document.querySelectorAll('[data-remove]').forEach((button) => {
+          button.addEventListener("click", () => toggleFavorite(Number(button.dataset.remove)));
+        });
+      }
+
+      function renderQuiz() {
+        quizBox.innerHTML = `
+          <strong>${quizData.question}</strong>
+          ${quizData.options
+            .map(
+              (option, index) => `
+                <button data-index="${index}" data-correct="${option.correct}">
+                  ${option.text}
+                </button>
+              `
+            )
+            .join("")}
+        `;
+
+        quizBox.querySelectorAll("button").forEach((button) => {
+          button.addEventListener("click", () => {
+            if (state.answered) return;
+            const correct = button.dataset.correct === "true";
+            state.answered = true;
+            if (correct) {
+              state.score += 1;
+              button.classList.add("correct");
+            } else {
+              button.classList.add("wrong");
+              const correctButton = [...quizBox.querySelectorAll("button")].find(
+                (item) => item.dataset.correct === "true"
+              );
+              correctButton.classList.add("correct");
+            }
+
+            scoreEl.textContent = `Puntaje: ${state.score}`;
+          });
+        });
+      }
+
+      searchInput.addEventListener("input", (event) => {
+        state.search = event.target.value;
+        renderFacts();
+      });
+
+      randomFactBtn.addEventListener("click", () => {
+        const random = facts[Math.floor(Math.random() * facts.length)];
+        state.filter = "all";
+        state.search = random.title;
+        searchInput.value = random.title;
+        renderFilters();
+        renderFacts();
+      });
+
+      renderFilters();
+      renderFacts();
+      renderFavorites();
+      renderQuiz();
+    </script>
+  </body>
+</html>
